@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     
     
     var randomNumber = Int(arc4random_uniform(100))
+    var userguess: Int!
     
     
     
@@ -32,6 +33,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func GuessButtonPressed(_ sender: Any) {
+        userguess = Int(userGuessField.text!)
+    print(userguess)
     }
     
 }
