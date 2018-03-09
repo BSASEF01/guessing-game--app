@@ -13,23 +13,29 @@ class ViewController: UIViewController {
     @IBOutlet weak var userGuessField: UITextField!
     
     
+    @IBOutlet weak var rulesLabel: UILabel!
     
     
+    @IBOutlet weak var userfeedback: UILabel!
     
     var randomNumber = Int(arc4random_uniform(100))
     var userguess: Int!
+    
+    var rulesText = """
+ Guess a number between 1 and 100 you have tires to guess the correct number you will be told if the number is higher or lower!
+"""
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+   rulesLabel.text = rulesText
     
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
 
     @IBAction func GuessButtonPressed(_ sender: Any) {
